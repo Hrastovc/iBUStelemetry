@@ -618,13 +618,13 @@ void iBUStelemetry::addSensor(byte type){
 void iBUStelemetry::setSensorMeasurement(byte adr, float value){
   switch(sensorType[adr]){
     case 0:
-      sensorValue[adr] = (int)value*100.0;
+      sensorValue[adr] = (float)value*100.0;
       break;
     case 1:
-      sensorValue[adr] = (int)(value*10.0)+400;
+      sensorValue[adr] = (float)(value*10.0)+400;
       break;
     case 2:
-      sensorValue[adr] = (int)value;
+      sensorValue[adr] = (float)value;
       break;
   }
 }
